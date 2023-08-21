@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./static/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="./static/css/bootstrap.min.css" rel="stylesheet">
@@ -133,7 +133,7 @@ co-ordination.
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="./static/images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
@@ -148,7 +148,7 @@ co-ordination.
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="./static/images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
@@ -162,7 +162,7 @@ co-ordination.
                 <!-- End .project -->
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="./static/images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
@@ -204,11 +204,11 @@ The system was designed using Python, Qt, postgres, etc.
     <div id="contact">
         <h2>Get in Touch</h2>
         <div id="contact-form">
-            <form method="POST" action="https://formspree.io/email@email.com">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
+            <form action="submit" method="post" class="reveal-content">
+                <input type="hidden" name="hide" placeholder="subject"  />
+                <input type="email" name="email" placeholder="Your email" required>
+                <input type="text" name="subject" placeholder="Your message">
+                <button class="log_btn" role="button" type="submit">Send</button>
             </form>
         </div>
         <!-- End #contact-form -->
@@ -256,7 +256,7 @@ The system was designed using Python, Qt, postgres, etc.
     <!-- End footer -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    <script src="./static/js/scripts.min.js"></script>
 </body>
 
 </html>
